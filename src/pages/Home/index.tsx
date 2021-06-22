@@ -2,10 +2,12 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
 import googleIconImg from '../../assets/images/google-icon.svg';
 
+import '../../styles/auth.scss';
+
 
 function Home() {
   return (
-    <div>
+    <div id="page-auth">
       <aside>
         <img src={illustrationImg} alt="Ilustração pergunta e resposta" />
 
@@ -14,17 +16,17 @@ function Home() {
         <p>Tire as dúvidas de sua audiência em tempo real</p>
       </aside>
 
-      <main>
+      <main className="main-content">
         <div>
           <img src={logoImg} alt="Let Me Ask" />
 
-          <button>
+          <button className="create-room">
             <img src={googleIconImg} alt="Logo da Google" />
 
             Criei sua sala com a Google
           </button>
 
-          <div>
+          <div className="separator">
             ou entre em uma sala
           </div>
 
