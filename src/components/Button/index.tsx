@@ -5,7 +5,7 @@ type ButtonProps = {
   children: string;
 }
 
-export function Button(props: ButtonProps) {
+function Button(props: ButtonProps) {
   const [counter, setCounter] = useState(0);
 
   const increase = () => {
@@ -18,3 +18,7 @@ export function Button(props: ButtonProps) {
     </button>
   )
 }
+
+export {
+  Button
+};
