@@ -19,6 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 100%;
   }
 
   span {
@@ -28,7 +30,7 @@
     align-self: center;
 
     padding: 0 16px 0 12px;
-    width: 230px;
+    width: 240px;
 
     font-size: 14px;
     font-weight: 500;
