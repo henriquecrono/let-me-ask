@@ -1,4 +1,5 @@
 import { Button } from '../../components/Button';
+import { RoomCode } from '../../components/RoomCode';
 
 import logoImg from '../../assets/images/logo.svg';
 
@@ -12,7 +13,7 @@ const Room = () => {
         <div className="content">
           <img src={logoImg} alt="Let Me Ask" />
 
-          <div>código</div>
+          <RoomCode code="123" />
         </div>
       </header>
 
