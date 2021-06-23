@@ -1,4 +1,4 @@
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -14,6 +14,8 @@ import '../../styles/auth.scss';
 
 const NewRoom = () => {
   const { user } = useAuth();
+
+  const [newRoomName, setNewRoomName] = useState('');
 
   const handleCreateRoom = (event: FormEvent) => {
     event.preventDefault();
@@ -47,6 +49,8 @@ const NewRoom = () => {
             <input
               type="text"
               placeholder="Nome da sala"
+              onChange={event => setNewRoomName(event.target.value)}
+              value={newRoomName}
             />
 
             <Button type="submit">
