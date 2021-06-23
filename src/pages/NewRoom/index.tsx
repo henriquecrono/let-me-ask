@@ -24,9 +24,7 @@ const NewRoom = () => {
   const handleCreateRoom = async (event: FormEvent) => {
     event.preventDefault();
 
-    if (newRoomName.trim() === '') {
-      return;
-    }
+    if (newRoomName.trim() === '') return;
 
     const roomRef = database.ref('rooms');
 
