@@ -1,12 +1,12 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import { AuthContextProvider } from './contexts/AuthContext';
+
 import { Home } from './pages/Home';
 import { NewRoom } from './pages/NewRoom';
 
-import { AuthContextProvider } from './contexts/AuthContext';
 
-
-export function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <AuthContextProvider>
@@ -16,3 +16,7 @@ export function App() {
     </BrowserRouter>
   );
 }
+
+export {
+  App
+};

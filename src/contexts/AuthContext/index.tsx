@@ -20,7 +20,7 @@ type AuthContextProviderProps = {
 
 const AuthContext = createContext({} as AuthContextType);
 
-function AuthContextProvider(props: AuthContextProviderProps) {
+const AuthContextProvider = (props: AuthContextProviderProps) => {
   const [user, setUser] = useState<User>();
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import '../../styles/button.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Button(props: ButtonProps) {
+const Button = (props: ButtonProps) => {
   return (
     <button className="button" {...props} />
   )

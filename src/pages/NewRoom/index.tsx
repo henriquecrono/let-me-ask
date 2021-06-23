@@ -12,7 +12,7 @@ import logoImg from '../../assets/images/logo.svg';
 import '../../styles/auth.scss';
 
 
-function NewRoom() {
+const NewRoom = () => {
   const { user } = useContext(AuthContext);
 
   return (

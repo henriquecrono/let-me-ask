@@ -13,8 +13,9 @@ import googleIconImg from '../../assets/images/google-icon.svg';
 import '../../styles/auth.scss';
 
 
-function Home() {
+const Home = () => {
   const history = useHistory();
+
   const { user, signInWithGoogle } = useContext(AuthContext);
 
   const handleCreateRoom = async () => {
