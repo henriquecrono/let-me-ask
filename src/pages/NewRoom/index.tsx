@@ -1,3 +1,5 @@
+import { FormEvent } from 'react';
+
 import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/useAuth';
@@ -12,6 +14,12 @@ import '../../styles/auth.scss';
 
 const NewRoom = () => {
   const { user } = useAuth();
+
+  const handleCreateRoom = (event: FormEvent) => {
+    event.preventDefault();
+
+    console.log(event);
+  };
 
   return (
     <div id="page-auth">
@@ -35,7 +43,7 @@ const NewRoom = () => {
             Crie sua nova sala
           </h2>
 
-          <form>
+          <form onSubmit={handleCreateRoom}>
             <input
               type="text"
               placeholder="Nome da sala"
