@@ -46,65 +46,66 @@
         font-size: 14px;
       }
     }
-  }
 
-  form {
-    textarea {
-      width: 100%;
-      min-height: 130px;
 
-      border: 0;
-      padding: 16px;
-      border-radius: 16px;
+    form {
+      textarea {
+        width: 100%;
+        min-height: 130px;
 
-      background: #FEFEFE;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, .04);
+        border: 0;
+        padding: 16px;
+        border-radius: 16px;
 
-      resize: vertical;
-    }
+        background: #FEFEFE;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, .04);
 
-    .form-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      margin-top: 16px;
-
-      .user-info {
-        display: flex;
-        align-items: center;
-
-        img {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-        }
-
-        span {
-          margin-left: 8px;
-
-          color: #29292E;
-          font-weight: 500;
-          font-size: 14px;
-        }
+        resize: vertical;
       }
 
-      >span {
-        font-size: 14px;
-        color: #737380;
-        font-weight: 500;
+      .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        button {
-          background: transparent;
+        margin-top: 16px;
 
-          border: 0;
+        .user-info {
+          display: flex;
+          align-items: center;
 
-          color: #835AFD;
-          text-decoration: underline;
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+          }
+
+          span {
+            margin-left: 8px;
+
+            color: #29292E;
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+
+        >span {
           font-size: 14px;
+          color: #737380;
           font-weight: 500;
 
-          cursor: pointer;
+          button {
+            background: transparent;
+
+            border: 0;
+
+            color: #835AFD;
+            text-decoration: underline;
+            font-size: 14px;
+            font-weight: 500;
+
+            cursor: pointer;
+          }
         }
       }
     }
