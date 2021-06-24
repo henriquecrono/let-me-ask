@@ -38,5 +38,33 @@
         font-size: 14px;
       }
     }
+
+    button {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+
+      &.like-button {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+
+        color: #737380;
+
+        transition: filter .2;
+
+        &.liked {
+          color: #853AFD;
+
+          svg path {
+            stroke: #853AFD;
+          }
+        }
+      }
+
+      &:hover {
+        filter: brightness(.7);
+      }
+    }
   }
 }
