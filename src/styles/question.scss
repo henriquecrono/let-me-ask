@@ -44,20 +44,19 @@
       background: transparent;
       cursor: pointer;
 
+      transition: filter .2s;
+
       &.like-button {
         display: flex;
         align-items: flex-end;
         gap: 8px;
-
+        
         color: #737380;
-
-        transition: filter .2;
-
         &.liked {
-          color: #853AFD;
+          color: #835AFD;
 
           svg path {
-            stroke: #853AFD;
+            stroke: #835AFD;
           }
         }
       }
