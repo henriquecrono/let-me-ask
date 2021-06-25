@@ -1,6 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
-// import { useAuth } from '../../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
 
 import { database } from '../../services/firebase';
@@ -20,7 +19,7 @@ type RoomParams = {
 };
 
 const AdminRoom = () => {
-  // const { user } = useAuth();
+  const history = useHistory();
 
   const params = useParams<RoomParams>();
   const roomId = params.id;
@@ -33,6 +32,14 @@ const AdminRoom = () => {
     }
   };
 
+  const handleCloseRoom = async () => {
+    await database.ref(`rooms/${roomId}`).update({
+      closedAt: new Date(),
+    });
+
+    history.push('/');
+  };
+
   return (
     <div id="page-room">
       <header>
@@ -41,8 +48,11 @@ const AdminRoom = () => {
 
           <div>
             <RoomCode code={roomId} />
-            <Button isOutlined>
-              Encerrar sala
+            <Button
+              onClick={() => handleCloseRoom()}
+              isOutlined
+            >
+              Fechar sala
             </Button>
           </div>
         </div>

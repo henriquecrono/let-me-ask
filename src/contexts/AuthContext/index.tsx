@@ -49,7 +49,7 @@ const AuthContextProvider = (props: AuthContextProviderProps) => {
     const { displayName, photoURL, uid } = user;
 
     if (!displayName || !photoURL) {
-      throw new Error('Missing information from Google Account.');
+      throw new Error('Informações estão faltando da conta da Google.');
     }
 
     setUser({
